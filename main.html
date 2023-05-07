@@ -12,7 +12,7 @@
 <body>
     <header class="main_title">
         <h1 class="main_title__text">문제 생성기</h1>
-        <img src="스크린샷 2023-05-05 112825.png">
+        <button class="main_title__logo"><img src="스크린샷 2023-05-05 112825.png"></button>
     </header>
 
     <main class="main_section">
@@ -26,9 +26,9 @@
         </article>
 
         <article class="text_input">
-            <form class="text_input__form">
+            <form class="text_input__form" method="post" action="/problem">
                 <input class="text_input__place" placeholder="생성할 문제의 주제를 입력해주세요!" required />
-                <button class="text_input__submit" type="submit"><a href="problem.html">제출</a></button>
+                <button class="text_input__submit" type="submit">제출</button>
             </form>
         </article>
     </main>
