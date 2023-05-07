@@ -10,4 +10,4 @@ const logoImg = document.querySelector(".main_title__logo");
 //     console.log("change color!");
 // })
 
-logoImg.addEventListener("click", colorChange);
+// logoImg.addEventListener("click", colorChange);

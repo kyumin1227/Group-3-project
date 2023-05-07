@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variable.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main_title">
-        <h1 class="main_title__text">문제 생성기</h1>
-        <button class="main_title__logo"><img src="스크린샷 2023-05-05 112825.png"></button>
+        <h1 class="main_title__text">Quiz Maker</h1>
+        <img src="임시 로고.png">
     </header>
 
     <main class="main_section">
@@ -27,8 +30,8 @@
 
         <article class="text_input">
             <form class="text_input__form" method="post" action="/problem">
-                <input class="text_input__place" placeholder="생성할 문제의 주제를 입력해주세요!" required />
-                <button class="text_input__submit" type="submit">제출</button>
+                <textarea class="text_input__place" placeholder="생성할 문제의 주제를 입력해주세요!" required></textarea>
+                <input class="text_input__submit" type="submit" value="submit">
             </form>
         </article>
     </main>
