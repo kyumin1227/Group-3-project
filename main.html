@@ -7,6 +7,7 @@
     <title>Main</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variable.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,26 +18,54 @@
 </head>
 <body>
     <header class="main_title">
-        <h1 class="main_title__text">Quiz Maker</h1>
-        <img src="임시 로고.png">
+        <div class="main_title__left">
+            <img class="main_title__left__img" src="임시 로고.png">
+            <h1 class="main_title__left__text"><a href="/">Quiz Maker</a></h1>
+        </div>
+        <div class="main_title__right">
+            <ul>
+                <li class="main_title__right__mypage"><a href="/myPage">My Page</a></li>
+                <li class="main_title__right__login"><a href="/login">Log In</a></li>
+            </ul>
+        </div>
     </header>
 
     <main class="main_section">
-        <article class="instruction">
-            <div class="instruction_title">
-                <h2>사용방법</h2>
-            </div>
-            <div class="instruction_text">
-                <p>어쩌구 저쩌구</p>
-            </div>
-        </article>
+        <form action="/" method="get">
+            <article class="main_section__text_input">
+                <textarea name="mainContent" class="main_section__text_input__place" placeholder="생성할 문제의 주제를 입력 후 문제 유형과 문제 개수를 선택해주세요!" required></textarea>
+            </article>
 
-        <article class="text_input">
-            <form class="text_input__form" method="post" action="/problem">
-                <textarea class="text_input__place" placeholder="생성할 문제의 주제를 입력해주세요!" required></textarea>
-                <input class="text_input__submit" type="submit" value="제출">
-            </form>
-        </article>
+            <article class="main_section__selection">
+                <div class="main_section__selection__quiz_category">
+                    <h3>문제 유형</h3>
+                    <div>
+                        <button class="btn1" type="button">주관식</button>
+                        <button class="btn2" type="button">객관식</button>
+                        <button class="btn3" type="button">O / X</button>
+                        <input name="quizCategory" id="one" type="radio" value="textQuiz" required>
+                        <input name="quizCategory" id="two" type="radio" value="numberQuiz" required>
+                        <input name="quizCategory" id="three" type="radio" value="oxQuiz" required>
+                    </div>
+                </div>
+                <div class="main_section__selection__quiz_count">
+                    <h3>문제 개수 선택</h3>
+                    <input name="quizCount" type="range" min="1" max="5" value="1" list="tickmarks" required>
+                    <datalist id="tickmarks">
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                    </datalist>
+                    <div>
+                        <h6>1</h6>
+                        <h6>5</h6>
+                    </div>
+                </div>
+                <input class="main_section__text_input__submit" type="submit" value="제출">
+            </article>
+        </form>
     </main>
 
     <script src="js/script.js"></script>
