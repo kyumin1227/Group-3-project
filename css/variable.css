@@ -12,8 +12,10 @@
     --color3: #BCCEF8;
     --color4: #FAF7F0; */
 
-    --color1: #B2B2B2;
-    --color2: #EAEAEA;
+    /* --color1: #B2B2B2; */
+    --color1: rgb(178, 178, 178);
+    /* --color2: #EAEAEA; */
+    --color2: rgb(178, 178, 178);
     --color3: #3C4048;
     --color4: #FAF7F0;
 }
