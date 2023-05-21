@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet', href='css/reset.css')
+  link(rel='stylesheet', href='css/variable.css')
+  link(rel='stylesheet', href='css/header.css')
+  link(rel='stylesheet', href='css/problem.css')
+  style.
+    @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Metal&family=Racing+Sans+One&display=swap');
+header.main_title
+  .main_title__left
+    img.main_title__left__img(src='임시 로고.png')
+    h1.main_title__left__text
+      a(href='/') Quiz Maker
+  .main_title__right
+    ul
+      li.main_title__right__mypage
+        a(href='/myPage') My Page
+      li.main_title__right__login
+        a(href='/login') Log In
+main.main_section
+  article.main_section__quiz
+    each problem in problems
+      +problem(problem)
+  article.main_section__selection
+    .main_section__selection__quiz_category
+      h3 답안 입력
+      div
+        span 1
+        button.btn1(type='button') 1
+        button.btn2(type='button') 2
+        button.btn3(type='button') 3
+        button.btn4(type='button') 4
+        input#one(name='answer1', type='radio', value='1', required='')
+        input#two(name='answer1', type='radio', value='2', required='')
+        input#three(name='answer1', type='radio', value='3', required='')
+        input#four(name='answer1', type='radio', value='4', required='')
+    input.main_section__text_input__submit(type='submit', value='제출')
+script(src='js/scriptQuiz.js')
